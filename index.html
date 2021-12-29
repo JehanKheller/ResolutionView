@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Monitor:</h2>
+    <p>Aqui, você vê o tamanho da resolução do seu monitor ou dispositivo móvel.</p>
+    <p id="dadosMonitor">Altura x Largura</p>
+
+    <h2>Navegador:</h2>
+    <p>Aqui, você vê o tamanho da resolução do seu navegador.</p>
+    <p id="dadosNavegador">Altura x Largura</p>
+  </body>
+  <script>
+    var heightScreen = window.screen.height;
+    var widthScreen = window.screen.width;
+    document.getElementById('dadosMonitor').textContent = widthScreen + "px x " + heightScreen + "px";
+
+    var heightBrowser = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    var widthBrowser = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    document.getElementById('dadosNavegador').textContent = widthBrowser + "px x " + heightBrowser + "px";
+
+    console.log("Tela: " + widthScreen + "px x " + heightScreen + "px");
+    console.log("Navegador: " + widthBrowser + "px x " + heightBrowser + "px");
+  </script>
+</html>
